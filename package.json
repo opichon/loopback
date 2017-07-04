@@ -8,6 +8,7 @@
   "scripts": {
     "babel-node": "babel-node",
     "lint": "eslint .",
+    "standard": "standard --fix",
     "start": "nodemon --exec babel-node .",
     "posttest": "npm run lint && nsp check"
   },
@@ -28,7 +29,8 @@
     "babel-preset-env": "^1.5.2",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
-    "nsp": "^2.1.0"
+    "nsp": "^2.1.0",
+    "standard": "^10.0.2"
   },
   "repository": {
     "type": "",
