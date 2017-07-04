@@ -12,7 +12,8 @@
     "posttest": "nsp check",
     "prestart": "npm run fix",
     "pretest": "npm run fix",
-    "start": "nodemon --exec babel-node ."
+    "start": "nodemon --exec babel-node .",
+    "test": "mocha --require babel-register --timeout 50000 --reporter nyan"
   },
   "dependencies": {
     "compression": "^1.0.3",
