@@ -6,9 +6,13 @@
     "node": ">=4"
   },
   "scripts": {
-    "lint": "eslint .",
-    "start": "nodemon .",
-    "posttest": "npm run lint && nsp check"
+    "babel-node": "babel-node",
+    "fix": "standard --fix",
+    "lint": "standard",
+    "posttest": "nsp check",
+    "prestart": "npm run fix",
+    "pretest": "npm run fix",
+    "start": "nodemon --exec babel-node ."
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -23,9 +27,10 @@
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.17.1",
-    "eslint-config-loopback": "^8.0.0",
-    "nsp": "^2.1.0"
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "nsp": "^2.1.0",
+    "standard": "^10.0.2"
   },
   "repository": {
     "type": "",
