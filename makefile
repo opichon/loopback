@@ -2,4 +2,7 @@ start:
 	yarn run start
 
 fix:
-	yarn run standard
+	yarn run fix
+
+test:
+	yarn test

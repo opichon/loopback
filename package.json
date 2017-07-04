@@ -7,10 +7,12 @@
   },
   "scripts": {
     "babel-node": "babel-node",
-    "lint": "eslint .",
-    "standard": "standard --fix",
-    "start": "nodemon --exec babel-node .",
-    "posttest": "npm run lint && nsp check"
+    "fix": "standard --fix",
+    "lint": "standard",
+    "posttest": "nsp check",
+    "prestart": "npm run fix",
+    "pretest": "npm run fix",
+    "start": "nodemon --exec babel-node ."
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -27,8 +29,6 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.5.2",
-    "eslint": "^3.17.1",
-    "eslint-config-loopback": "^8.0.0",
     "nsp": "^2.1.0",
     "standard": "^10.0.2"
   },
