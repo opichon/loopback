@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
-module.exports = function(Note) {
+export default function(Note) {
 };
