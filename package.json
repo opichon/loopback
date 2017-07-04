@@ -29,8 +29,11 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.5.2",
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
     "nsp": "^2.1.0",
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "supertest": "^3.0.0"
   },
   "repository": {
     "type": "",
