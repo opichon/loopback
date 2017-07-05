@@ -1,0 +1,45 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "babel-node": "babel-node",
+    "fix": "standard --fix",
+    "lint": "standard",
+    "posttest": "nsp check",
+    "prestart": "npm run fix",
+    "pretest": "npm run fix",
+    "start": "nodemon --exec babel-node .",
+    "test": "mocha --require babel-register --timeout 50000 --reporter nyan"
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "dotenv": "^4.0.0",
+    "helmet": "^1.3.0",
+    "loopback": "^3.0.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^4.0.0",
+    "nodemon": "^1.11.0",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "nsp": "^2.1.0",
+    "standard": "^10.0.2",
+    "supertest": "^3.0.0"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "api"
+}
