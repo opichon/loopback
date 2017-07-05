@@ -1,5 +1,3 @@
-'use strict'
-
 import {describe, it} from 'mocha'
 import app from '../dist/server'
 import status from 'http-status'
