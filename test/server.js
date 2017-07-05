@@ -1,19 +1,15 @@
 'use strict'
 
-import config from 'dotenv'
 import {describe, it} from 'mocha'
-import supertest from 'supertest'
+import app from '../dist/server'
 import status from 'http-status'
+import supertest from 'supertest'
 
-config.config()
-
-const url = 'http://' + process.env.HOST + ':' + process.env.PORT
-
-const api = supertest(url)
+const request = supertest(app)
 
 describe('Api is up and running', function () {
   it('should be able to open api url', function () {
-    api.get('/')
+    request.get('/')
       .expect(status.OK, function (err) {
         console.log(err)
       })
@@ -22,7 +18,7 @@ describe('Api is up and running', function () {
 
 describe('Api explorer is up and running', function () {
   it('should be able to open api explorer url', function () {
-    api.get('/explorer')
+    request.get('/explorer/')
       .expect(status.OK, function (err) {
         console.log(err)
       })
