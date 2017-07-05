@@ -6,14 +6,17 @@
     "node": ">=4"
   },
   "scripts": {
-    "babel-node": "babel-node",
+    "dev": "nodemon --exec babel-node --watch server .",
+    "dist": "babel server -d dist --copy-files",
     "fix": "standard --fix",
     "lint": "standard",
+    "postdist": "nsp check",
     "posttest": "nsp check",
+    "predist": "npm run fix",
     "prestart": "npm run fix",
     "pretest": "npm run fix",
-    "start": "nodemon --exec babel-node .",
-    "test": "mocha --require babel-register --timeout 50000 --reporter nyan"
+    "start": "node dist/server.js",
+    "test": "NODE_ENV=test mocha --require babel-register --timeout 50000 --reporter nyan"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -23,7 +26,6 @@
     "loopback": "^3.0.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^4.0.0",
-    "nodemon": "^1.11.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },
@@ -32,6 +34,7 @@
     "babel-preset-env": "^1.5.2",
     "chai": "^4.0.2",
     "mocha": "^3.4.2",
+    "nodemon": "^1.11.0",
     "nsp": "^2.1.0",
     "standard": "^10.0.2",
     "supertest": "^3.0.0"
