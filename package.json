@@ -12,7 +12,6 @@
     "lint": "standard",
     "postdist": "nsp check",
     "posttest": "nsp check",
-    "predist": "npm run fix",
     "start": "node dist/server.js",
     "test": "mocha --require babel-register --timeout 5000 --reporter nyan",
     "test-watch": "npm run test -- --watch"
