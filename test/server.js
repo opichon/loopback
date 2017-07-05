@@ -2,7 +2,6 @@
 
 import {describe, it} from 'mocha'
 import app from '../dist/server'
-import config from 'dotenv'
 import status from 'http-status'
 import supertest from 'supertest'
 
