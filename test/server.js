@@ -1,7 +1,5 @@
-'use strict'
-
-import config from 'dotenv'
 import {describe, it} from 'mocha'
+import config from 'dotenv'
 import supertest from 'supertest'
 import status from 'http-status'
 
