@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "main": "server/server.js",
   "engines": {
     "node": ">=4"
@@ -10,12 +10,12 @@
     "dist": "babel server -d dist --copy-files",
     "fix": "standard --fix",
     "lint": "standard",
+    "postdist": "nsp check",
     "posttest": "nsp check",
     "predist": "npm run fix",
-    "prestart": "npm run fix",
-    "pretest": "npm run dist",
     "start": "node dist/server.js",
-    "test": "NODE_ENV=test mocha --require babel-register --timeout 5000 --reporter nyan"
+    "test": "mocha --require babel-register --timeout 5000 --reporter nyan",
+    "test-watch": "npm run test -- --watch"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -42,6 +42,6 @@
     "type": "",
     "url": ""
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "description": "api"
 }

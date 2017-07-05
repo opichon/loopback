@@ -2,6 +2,10 @@ dev:
 	@printf "\033[0;32m>>> Running app\033[0m\n"
 	yarn run dev
 
+dist:
+	@printf "\033[0;32m>>> Building app for production\033[0m\n"
+	yarn run dist
+
 fix:
 	@printf "\033[0;32m>>> Fixing code standards\033[0m\n"
 	yarn run fix
@@ -22,4 +26,9 @@ test:
 	@printf "\033[0;32m>>> Running tests\033[0m\n"
 	yarn test
 
-.PHONY: test
+upgrade:
+	@printf "\033[0;32m>>> Upgrading app\033[0m\n"
+	yarn upgrade
+
+
+.PHONY: dist test
