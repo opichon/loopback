@@ -14,7 +14,7 @@
     "posttest": "nsp check",
     "predist": "npm run fix",
     "prestart": "npm run fix",
-    "pretest": "npm run fix && npm run dist",
+    "pretest": "npm run dist",
     "start": "node dist/server.js",
     "test": "NODE_ENV=test mocha --require babel-register --timeout 50000 --reporter nyan"
   },
