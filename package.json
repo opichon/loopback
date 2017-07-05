@@ -10,13 +10,12 @@
     "dist": "babel server -d dist --copy-files",
     "fix": "standard --fix",
     "lint": "standard",
-    "postdist": "nsp check",
     "posttest": "nsp check",
     "predist": "npm run fix",
     "prestart": "npm run fix",
     "pretest": "npm run dist",
     "start": "node dist/server.js",
-    "test": "NODE_ENV=test mocha --require babel-register --timeout 50000 --reporter nyan"
+    "test": "NODE_ENV=test mocha --require babel-register --timeout 5000 --reporter nyan"
   },
   "dependencies": {
     "compression": "^1.0.3",
